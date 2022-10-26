@@ -2,6 +2,7 @@ package S1T7N1;
 
 public class Main1 {
 
+	@SuppressWarnings("deprecation")
 	public static void main(String[] args) {
 		/*- Exercici 1
 		-Crea una jerarquia d’objectes amb tres classes:  Treballador, TreballadorOnline i TreballadorPresencial.
@@ -14,7 +15,12 @@ public class Main1 {
 		-més el valor d'un atribut static anomenat benzina que afegirem en aquesta classe.
 		-En els treballadors online, el mètode per calcular el seu sou rebrà per paràmetre el nombre d'hores treballades al mes.
 		-A l'hora de calcular el sou es multiplicarà el nombre d'hores treballades pel preu/hora i se li sumarà el preu de la tarifa plana d'Internet,
-		que serà una constant de la classe TreballadorOnline.*/
+		que serà una constant de la classe TreballadorOnline.
+		
+		- Exercici 2
+		Afegeix a les classes filles alguns mètodes obsolets (deprecated), i utilitza l’anotació corresponent.
+		Invoca des d'una classe externa els mètodes obsolets, suprimint mitjançant l'anotació corresponent els “warnings” per ser obsolets.
+		*/
 
 		float souT;
 		float souTO;
@@ -29,9 +35,12 @@ public class Main1 {
 		sinIdentificar.imprimeix();
 		System.out.println("Sou = " + sinIdentificar.calcularSou(40));
 		online1.imprimeix();
+		online1.vigilarTreballador();
 		System.out.println("Sou = " + online1.calcularSou(40));
 		presencial1.imprimeix();
 		System.out.println("Sou = " + presencial1.calcularSou(40));
+		presencial1.diesel();
+		presencial1.megafonia();
 		
 	}
 

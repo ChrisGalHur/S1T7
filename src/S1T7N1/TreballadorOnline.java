@@ -20,4 +20,9 @@ public class TreballadorOnline extends Treballador{
 		System.out.println("Treballador Online [ nom = " + this.getNom() + " cognom = " + this.getCognom() + ", preuHora = " + this.getPreuHora() + " ]");
 	}
 	
+	@Deprecated
+	public void vigilarTreballador() {
+		System.out.println("S'ha conectat a la pantalla del treballador.");
+	}
+	
 }

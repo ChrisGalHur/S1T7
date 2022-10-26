@@ -20,4 +20,14 @@ public class TreballadorPresencial extends Treballador{
 		System.out.println("Treballador Presencial [ nom = " + this.getNom() + " cognom = " + this.getCognom() + " preuHora = " + this.getPreuHora() + " ]");
 	}
 	
+	@Deprecated
+	public void megafonia() {
+		System.out.println("S'ha trucat per megafonia al treballador.");
+	}
+	
+	@Deprecated
+	public void diesel() {
+	float benzinaDiesel = (float) (benzina - (benzina * 0.15));
+	System.out.println(benzinaDiesel);
+	}
 }
